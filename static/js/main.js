@@ -1,5 +1,5 @@
 /* 
-   AI & TECH SOLUTIONS
+   DM TECH INNOVATIONS
    MAIN JAVASCRIPT
    */
 
@@ -562,7 +562,7 @@ if (
        */
 
     console.log(
-        "AI & Tech Solutions JavaScript loaded successfully."
+        "DM Tech Innovations JavaScript loaded successfully."
     );
 
 });

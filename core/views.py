@@ -49,7 +49,7 @@ def contact(request):
         email_subject = f"New Contact Message: {subject}"
 
         text_content = f"""
-AI & TECH SOLUTIONS
+DM TECH INNOVATIONS
 New Contact Form Submission
 
 Name: {name}
@@ -59,7 +59,7 @@ Subject: {subject}
 Message:
 {message}
 
-This message was submitted through the AI & Tech Solutions website.
+This message was submitted through the DM Tech Innovations website.
 """
 
         html_content = f"""
@@ -79,7 +79,7 @@ font-family:Arial, Helvetica, sans-serif;">
 
         <div style="background:#0d6efd; padding:25px; color:white;">
             <h1 style="margin:0; font-size:24px;">
-                AI &amp; Tech Solutions
+                DM Tech Innovations
             </h1>
 
             <p style="margin:8px 0 0; font-size:15px;">
@@ -166,7 +166,7 @@ font-family:Arial, Helvetica, sans-serif;">
 
             <p style="margin:0;">
                 This notification was generated automatically
-                by the AI &amp; Tech Solutions website.
+                by the DM Tech Innovations website.
             </p>
 
         </div>
@@ -196,13 +196,13 @@ font-family:Arial, Helvetica, sans-serif;">
         # --------------------------------------------------
 
         customer_subject = (
-            "Thank You for Contacting AI & Tech Solutions"
+            "Thank You for Contacting DM Tech Innovations"
         )
 
         customer_text = f"""
 Dear {name},
 
-Thank you for contacting AI & Tech Solutions.
+Thank you for contacting DM Tech Innovations.
 
 We have successfully received your message and our team
 will review it and get back to you as soon as possible.
@@ -214,10 +214,10 @@ Subject: {subject}
 Message:
 {message}
 
-Thank you for choosing AI & Tech Solutions.
+Thank you for choosing DM Tech Innovations.
 
 Best regards,
-AI & Tech Solutions
+DM Tech Innovations
 ICT & Digital Solutions
 """
 
@@ -240,7 +240,7 @@ font-family:Arial, Helvetica, sans-serif;">
         color:white; text-align:center;">
 
             <h1 style="margin:0;">
-                AI &amp; Tech Solutions
+                DM Tech Innovations
             </h1>
 
             <p style="margin:8px 0 0;">
@@ -257,7 +257,7 @@ font-family:Arial, Helvetica, sans-serif;">
 
             <p style="color:#444; line-height:1.7;">
                 Thank you for contacting
-                <strong>AI &amp; Tech Solutions</strong>.
+                <strong>DM Tech Innovations</strong>.
                 We have successfully received your message.
             </p>
 
@@ -295,7 +295,7 @@ font-family:Arial, Helvetica, sans-serif;">
 
             <p style="color:#444;">
                 Best regards,<br>
-                <strong>AI &amp; Tech Solutions</strong><br>
+                <strong>DM Tech Innovations</strong><br>
                 ICT &amp; Digital Solutions
             </p>
 
@@ -309,7 +309,7 @@ font-family:Arial, Helvetica, sans-serif;">
             </p>
 
             <p style="margin:8px 0 0;">
-                AI &amp; Tech Solutions
+                DM Tech Innovations
             </p>
 
         </div>
