@@ -145,11 +145,9 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
 
-# Email configuration
-# Email configuration
 
+# Email configuration
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
@@ -158,18 +156,5 @@ EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 
 DEFAULT_FROM_EMAIL = os.getenv("EMAIL_HOST_USER")
-
-CONTACT_NOTIFICATION_EMAIL = os.getenv(
-    "CONTACT_NOTIFICATION_EMAIL"
-)
-
-
-DEFAULT_FROM_EMAIL = os.getenv("EMAIL_HOST_USER")
-
-CONTACT_NOTIFICATION_EMAIL = os.getenv(
-    "CONTACT_NOTIFICATION_EMAIL"
-)
-
-# Email configuration
-
+CONTACT_NOTIFICATION_EMAIL = os.getenv("CONTACT_NOTIFICATION_EMAIL")
 
