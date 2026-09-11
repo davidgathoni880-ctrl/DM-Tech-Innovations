@@ -10,8 +10,8 @@ __pycache__/
 *.py[cod]
 
 # Django
-*.log
-db.sqlite3
+*.log 
+mysql
 
 # VS Code
 .vscode/
