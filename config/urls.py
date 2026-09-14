@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', include('core.urls')),
+    path('ai/', include('ai_assistant.urls')),
 
 ]

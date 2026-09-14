@@ -2517,3 +2517,78 @@ transform: translateY(-2px);
         font-size: 34px;
     }
 }
+
+
+
+/* ==============================
+   AI ASSISTANT BUTTON
+   ============================== */
+
+.ai-assistant-button {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 18px;
+
+    background-color: #0d6efd;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+
+    z-index: 9999;
+
+    transition: all 0.3s ease;
+}
+
+
+.ai-assistant-button:hover {
+    color: white;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.ai-assistant-button i {
+    font-size: 1.2rem;
+}
+
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+    .ai-assistant-button {
+        right: 15px;
+        bottom: 15px;
+
+        width: 55px;
+        height: 55px;
+
+        padding: 0;
+
+        justify-content: center;
+
+        border-radius: 50%;
+    }
+
+    .ai-assistant-button span {
+        display: none;
+    }
+
+    .ai-assistant-button i {
+        font-size: 1.4rem;
+    }
+}

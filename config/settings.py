@@ -56,7 +56,9 @@ INSTALLED_APPS = [
     'training',
     'contact',
     'blog',
+    'ai_assistant',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

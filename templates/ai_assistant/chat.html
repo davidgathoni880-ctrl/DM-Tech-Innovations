@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+
+{% block title %}AI Assistant | DavieTech Innovations{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+```
+        <div class="card shadow-sm border-0">
+
+            <!-- Header -->
+            <div class="card-header bg-primary text-white py-3">
+                <div class="d-flex align-items-center">
+                    <div class="me-3 fs-3">🤖</div>
+                    <div>
+                        <h4 class="mb-0">DavieTech AI Assistant</h4>
+                        <small>Online • Ready to help</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat area -->
+            <div
+                id="chat-box"
+                class="card-body"
+                style="height: 450px; overflow-y: auto; background-color: #f8f9fa;"
+            >
+
+                <!-- Welcome message -->
+                <div class="d-flex mb-3">
+                    <div
+                        class="bg-white border rounded-3 p-3 shadow-sm"
+                        style="max-width: 80%;"
+                    >
+                        <strong>AI Assistant</strong>
+                        <p class="mb-0 mt-1">
+                            Hello! 👋 I'm the DavieTech AI Assistant.
+                            How can I help you today?
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Typing indicator -->
+            <div
+                id="typing-indicator"
+                class="px-3 pb-2"
+                style="display: none;"
+            >
+                <small class="text-muted">
+                    🤖 AI Assistant is typing...
+                </small>
+            </div>
+
+            <!-- Input area -->
+            <div class="card-footer bg-white p-3">
+
+                <form id="chat-form">
+
+                    {% csrf_token %}
+
+                    <div class="input-group">
+
+                        <input
+                            type="text"
+                            id="message"
+                            class="form-control"
+                            placeholder="Ask me something..."
+                            autocomplete="off"
+                            required
+                        >
+
+                        <button
+                            type="submit"
+                            id="send-button"
+                            class="btn btn-primary"
+                        >
+                            Send
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+```
+
+</div>
+
+<script>
+const chatForm = document.getElementById("chat-form");
+const messageInput = document.getElementById("message");
+const chatBox = document.getElementById("chat-box");
+const sendButton = document.getElementById("send-button");
+const typingIndicator = document.getElementById("typing-indicator");
+
+
+// Escape HTML so user input cannot insert HTML into the page
+function escapeHTML(text) {
+    const div = document.createElement("div");
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+
+// Add a user message
+function addUserMessage(message) {
+
+    const safeMessage = escapeHTML(message);
+
+    chatBox.innerHTML += `
+        <div class="d-flex justify-content-end mb-3">
+            <div
+                class="bg-primary text-white rounded-3 p-3 shadow-sm"
+                style="max-width: 80%;"
+            >
+                <strong>You</strong>
+                <p class="mb-0 mt-1">${safeMessage}</p>
+            </div>
+        </div>
+    `;
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+
+// Add an AI message
+function addAIMessage(message) {
+
+    const safeMessage = escapeHTML(message);
+
+    chatBox.innerHTML += `
+        <div class="d-flex mb-3">
+            <div
+                class="bg-white border rounded-3 p-3 shadow-sm"
+                style="max-width: 80%;"
+            >
+                <strong>AI Assistant</strong>
+                <p class="mb-0 mt-1">${safeMessage}</p>
+            </div>
+        </div>
+    `;
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+
+// Handle the chat form
+chatForm.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    const message = messageInput.value.trim();
+
+    if (!message) {
+        return;
+    }
+
+
+    // Display user's message
+    addUserMessage(message);
+
+    // Clear input
+    messageInput.value = "";
+
+
+    // Disable controls while waiting
+    sendButton.disabled = true;
+    messageInput.disabled = true;
+
+    // Show typing indicator
+    typingIndicator.style.display = "block";
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+
+    try {
+
+        const response = await fetch("/ai/chat/", {
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRFToken": document.querySelector(
+                    "[name=csrfmiddlewaretoken]"
+                ).value
+            },
+
+            body: JSON.stringify({
+                message: message
+            })
+        });
+
+
+        const data = await response.json();
+
+
+        if (response.ok && data.response) {
+
+            addAIMessage(data.response);
+
+        } else {
+
+            addAIMessage(
+                "Sorry, I couldn't process your request. Please try again."
+            );
+
+        }
+
+
+    } catch (error) {
+
+        addAIMessage(
+            "Sorry, something went wrong. Please try again."
+        );
+
+    }
+
+
+    // Hide typing indicator
+    typingIndicator.style.display = "none";
+
+
+    // Re-enable controls
+    sendButton.disabled = false;
+    messageInput.disabled = false;
+
+    // Put cursor back in input
+    messageInput.focus();
+
+});
+</script>
+
+{% endblock %}
