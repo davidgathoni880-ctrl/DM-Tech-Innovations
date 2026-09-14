@@ -1,5 +1,5 @@
 /* 
-   DM TECH INNOVATIONS
+   DavieTechInnovations
    MAIN JAVASCRIPT
    */
 
@@ -58,9 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* =========================================================
+    /* 
    ACTIVE NAVIGATION LINK
-   ========================================================= */
+    */
 
 const sections = document.querySelectorAll(
     "section[id]"

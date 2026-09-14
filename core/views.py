@@ -49,7 +49,7 @@ def contact(request):
         email_subject = f"New Contact Message: {subject}"
 
         text_content = f"""
-DM TECH INNOVATIONS
+DavieTechInnovations
 New Contact Form Submission
 
 Name: {name}
@@ -59,7 +59,7 @@ Subject: {subject}
 Message:
 {message}
 
-This message was submitted through the DM Tech Innovations website.
+This message was submitted through the DavieTechInnovations website.
 """
 
         html_content = f"""
@@ -79,7 +79,7 @@ font-family:Arial, Helvetica, sans-serif;">
 
         <div style="background:#0d6efd; padding:25px; color:white;">
             <h1 style="margin:0; font-size:24px;">
-                DM Tech Innovations
+                DavieTechInnovations
             </h1>
 
             <p style="margin:8px 0 0; font-size:15px;">
@@ -166,7 +166,7 @@ font-family:Arial, Helvetica, sans-serif;">
 
             <p style="margin:0;">
                 This notification was generated automatically
-                by the DM Tech Innovations website.
+                by the DavieTechInnovationss website.
             </p>
 
         </div>
@@ -195,13 +195,13 @@ font-family:Arial, Helvetica, sans-serif;">
         # EMAIL 2: Confirmation to customer
        
         customer_subject = (
-            "Thank You for Contacting DM Tech Innovations"
+            "Thank You for Contacting DavieTechInnovations"
         )
 
         customer_text = f"""
 Dear {name},
 
-Thank you for contacting DM Tech Innovations.
+Thank you for contacting DavieTechInnovations.
 
 We have successfully received your message and our team
 will review it and get back to you as soon as possible.
@@ -213,10 +213,10 @@ Subject: {subject}
 Message:
 {message}
 
-Thank you for choosing DM Tech Innovations.
+Thank you for choosing DavieTechInnovations.
 
 Best regards,
-DM Tech Innovations
+DavieTechInnovations
 ICT & Digital Solutions
 """
 
@@ -239,7 +239,7 @@ font-family:Arial, Helvetica, sans-serif;">
         color:white; text-align:center;">
 
             <h1 style="margin:0;">
-                DM Tech Innovations
+                DavieTechInnovations
             </h1>
 
             <p style="margin:8px 0 0;">
@@ -256,7 +256,7 @@ font-family:Arial, Helvetica, sans-serif;">
 
             <p style="color:#444; line-height:1.7;">
                 Thank you for contacting
-                <strong>DM Tech Innovations</strong>.
+                <strong>DavieTechInnovations</strong>.
                 We have successfully received your message.
             </p>
 
@@ -294,7 +294,7 @@ font-family:Arial, Helvetica, sans-serif;">
 
             <p style="color:#444;">
                 Best regards,<br>
-                <strong>DM Tech Innovations</strong><br>
+                <strong>DavieTechInnovations</strong><br>
                 ICT &amp; Digital Solutions
             </p>
 
@@ -308,7 +308,7 @@ font-family:Arial, Helvetica, sans-serif;">
             </p>
 
             <p style="margin:8px 0 0;">
-                DM Tech Innovations
+                DavieTechInnovations 
             </p>
 
         </div>
