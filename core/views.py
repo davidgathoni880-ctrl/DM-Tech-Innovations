@@ -42,9 +42,9 @@ def contact(request):
             message=message,
         )
 
-        # --------------------------------------------------
+       
         # EMAIL 1: Notification to website owner
-        # --------------------------------------------------
+       
 
         email_subject = f"New Contact Message: {subject}"
 
@@ -191,10 +191,9 @@ font-family:Arial, Helvetica, sans-serif;">
 
         email_message.send(fail_silently=False)
 
-        # --------------------------------------------------
+      
         # EMAIL 2: Confirmation to customer
-        # --------------------------------------------------
-
+       
         customer_subject = (
             "Thank You for Contacting DM Tech Innovations"
         )
