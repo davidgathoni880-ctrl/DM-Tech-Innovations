@@ -308,7 +308,7 @@ font-family:Arial, Helvetica, sans-serif;">
             </p>
 
             <p style="margin:8px 0 0;">
-                DavieTechInnovations 
+                DavieTech Innovations 
             </p>
 
         </div>
