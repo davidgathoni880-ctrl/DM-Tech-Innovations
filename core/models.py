@@ -11,7 +11,7 @@ class ContactMessage(models.Model):
 
     subject = models.CharField(max_length=200)
 
-    message = models.TextField()
+    message = models.TextField(250)
 
     created_at = models.DateTimeField(auto_now_add=True)
 
