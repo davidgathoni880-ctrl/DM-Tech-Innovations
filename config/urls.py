@@ -10,6 +10,14 @@ def google_site_verification(request):
         content_type="text/plain",
     )
 
+def robots_txt(request):
+    content = (
+        "User-agent: *\n"
+        "Allow: /\n"
+        "\n"
+        "Sitemap: https://web-production-5bb69.up.railway.app/sitemap.xml\n"
+    )
+    return HttpResponse(content, content_type="text/plain")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -22,4 +30,6 @@ urlpatterns = [
         google_site_verification,
         name='google_site_verification',
     ),
+
+    path('robots.txt', robots_txt, name='robots_txt'),
 ]
