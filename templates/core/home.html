@@ -1,110 +1,107 @@
 {% extends 'base.html' %}
 {% block content %}
-
 <!-- 
-     HERO SECTION
-     CENTERED CONTENT + ANIMATED CPU
-       -->
+      HERO SECTION
+      CENTERED CONTENT + ANIMATED CPU
+-->
 
-<section class="hero-section bg-dark text-white">
+<section class="hero-section bg-dark text-white" style="text-align: center; width: 100%;">
 
- 
-<div class="container">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
 
-    <div class="hero-content">
+        <div class="hero-content" style="width: 100%; max-width: 900px; display: flex; flex-direction: column; align-items: center; text-align: center;">
 
-        <!-- Small Heading -->
-        <p class="text-primary text-uppercase fw-bold mb-3">
-            ICT • WEB • AI • DIGITAL SOLUTIONS
-        </p>
-
-        <!-- Main Heading -->
-        <h1 class="display-3 fw-bold mb-4">
-            Technology Solutions
-            <span class="text-primary">
-                That Help Your Business Grow.
-            </span>
-        </h1>
-
-        <!-- Description -->
-        <p class="lead text-light mb-4">
-            We provide professional computer services,
-            ICT and AI training, website development,
-            graphic design, web hosting and business
-            automation solutions.
-        </p>
-
-        <!-- Buttons -->
-        <div class="hero-buttons d-flex flex-wrap justify-content-center gap-3">
-
-            <a
-                href="#services"
-                class="btn btn-primary btn-lg px-4"
-            >
-                <i class="bi bi-grid me-1"></i>
-                Our Services
-            </a>
-
-            <a
-                href="#contact"
-                class="btn btn-outline-light btn-lg px-4"
-            >
-                <i class="bi bi-chat-dots me-1"></i>
-                Contact Us
-            </a>
-
-        </div>
-
-        <!-- Trust Information -->
-        <div class="hero-trust row mt-5 g-3 justify-content-center">
-
-            <div class="col-sm-4">
-                <div class="hero-trust-item">
-                    <i class="bi bi-check-circle-fill text-primary"></i>
-                    <span>Professional Service</span>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="hero-trust-item">
-                    <i class="bi bi-check-circle-fill text-primary"></i>
-                    <span>Reliable Solutions</span>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="hero-trust-item">
-                    <i class="bi bi-check-circle-fill text-primary"></i>
-                    <span>Business Focused</span>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Animated CPU -->
-        <div class="hero-visual">
-
-            <div class="hero-icon-wrapper">
-
-                <i class="bi bi-cpu hero-main-icon"></i>
-
-            </div>
-
-            <h3 class="fw-bold mt-4">
-                DavieTechInnovations
-            </h3>
-
-            <p class="text-light">
-                Empowering people and businesses
-                through technology.
+            <!-- Small Heading -->
+            <p class="text-primary text-uppercase fw-bold mb-3" style="text-align: center; margin-left: auto; margin-right: auto;">
+                ICT • WEB • AI • DIGITAL SOLUTIONS
             </p>
+
+            <!-- Main Heading -->
+            <h1 class="display-3 fw-bold mb-4" style="text-align: center; margin-left: auto; margin-right: auto;">
+                Technology Solutions
+                <span class="text-primary">
+                    That Help Your Business Grow.
+                </span>
+            </h1>
+
+            <!-- Description -->
+            <p class="lead text-light mb-4" style="text-align: center; margin-left: auto; margin-right: auto; max-width: 600px;">
+                We provide professional computer services,
+                ICT and AI training, website development,
+                graphic design, web hosting and business
+                automation solutions.
+            </p>
+
+            <!-- Buttons -->
+            <div class="hero-buttons d-flex flex-wrap justify-content-center gap-3" style="width: 100%; justify-content: center; align-items: center;">
+
+                <a
+                    href="#services"
+                    class="btn btn-primary btn-lg px-4"
+                >
+                    <i class="bi bi-grid me-1"></i>
+                    Our Services
+                </a>
+
+                <a
+                    href="#contact"
+                    class="btn btn-outline-light btn-lg px-4"
+                >
+                    <i class="bi bi-chat-dots me-1"></i>
+                    Contact Us
+                </a>
+
+            </div>
+
+            <!-- Trust Information -->
+            <div class="hero-trust row mt-5 g-3 justify-content-center" style="width: 100%; text-align: center; justify-content: center;">
+
+                <div class="col-sm-4" style="text-align: center;">
+                    <div class="hero-trust-item" style="display: flex; justify-content: center; align-items: center; gap: 8px;">
+                        <i class="bi bi-check-circle-fill text-primary"></i>
+                        <span>Professional Service</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-4" style="text-align: center;">
+                    <div class="hero-trust-item" style="display: flex; justify-content: center; align-items: center; gap: 8px;">
+                        <i class="bi bi-check-circle-fill text-primary"></i>
+                        <span>Reliable Solutions</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-4" style="text-align: center;">
+                    <div class="hero-trust-item" style="display: flex; justify-content: center; align-items: center; gap: 8px;">
+                        <i class="bi bi-check-circle-fill text-primary"></i>
+                        <span>Business Focused</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Animated CPU (Placed below text to feel like a new page) -->
+            <div class="hero-visual" style="margin-top: 5vh; min-height: 8vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; ">
+
+                <div class="hero-icon-wrapper" style="display: flex; justify-content: center; align-items: center;">
+
+                    <i class="bi bi-cpu hero-main-icon" style="font-size: 5rem;"></i>
+
+                </div>
+
+                <h3 class="fw-bold mt-4" style="text-align: center;">
+                    DavieTechInnovations
+                </h3>
+
+                <p class="text-light" style="text-align: center;">
+                    Empowering people and businesses
+                    through technology.
+                </p>
+
+            </div>
 
         </div>
 
     </div>
-
-</div>
- 
 
 </section>
 
