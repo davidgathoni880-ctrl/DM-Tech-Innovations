@@ -380,9 +380,9 @@ img {
 }
 
 
-/* 
+/* ==============================
    11. BACK TO TOP BUTTON
-    */
+   ============================== */
 
 #backToTop {
     position: fixed;
@@ -412,8 +412,7 @@ img {
 
     visibility: hidden;
 
-    transform:
-        translateY(15px);
+    transform: translateY(15px);
 
     transition:
         opacity 0.3s ease,
@@ -428,15 +427,12 @@ img {
 
     visibility: visible;
 
-    transform:
-        translateY(0);
+    transform: translateY(0);
 }
 
 #backToTop:hover {
-    transform:
-        translateY(-4px);
+    transform: translateY(-4px);
 }
-
 
 /* 
    12. PAGE LOADING
@@ -2526,16 +2522,21 @@ transform: translateY(-2px);
 
 .ai-assistant-button {
     position: fixed;
+
     right: 25px;
-    bottom: 25px;
+    /* 25px (bottom) + 45px (backToTop height) + 15px (gap) = 85px */
+    bottom: 85px;
 
     display: flex;
+
     align-items: center;
+
     gap: 8px;
 
     padding: 12px 18px;
 
     background-color: #0d6efd;
+
     color: white;
 
     text-decoration: none;
@@ -2551,7 +2552,6 @@ transform: translateY(-2px);
     transition: all 0.3s ease;
 }
 
-
 .ai-assistant-button:hover {
     color: white;
 
@@ -2560,19 +2560,28 @@ transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-
 .ai-assistant-button i {
     font-size: 1.2rem;
 }
 
 
-/* Mobile */
+/* ==============================
+   MOBILE RESPONSIVENESS
+   ============================== */
 
 @media (max-width: 576px) {
 
-    .ai-assistant-button {
+    #backToTop {
         right: 15px;
         bottom: 15px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .ai-assistant-button {
+        right: 15px;
+        /* 15px (bottom) + 40px (backToTop height) + 15px (gap) = 70px */
+        bottom: 70px;
 
         width: 55px;
         height: 55px;
