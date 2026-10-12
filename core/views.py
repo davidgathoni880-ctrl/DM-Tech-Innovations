@@ -192,7 +192,11 @@ font-family:Arial, Helvetica, sans-serif;">
             "text/html",
         )
 
-        email_message.send(fail_silently=False)
+        
+        try:
+            email_message.send(fail_silently=False)
+        except Exception:
+            logger.exception("Failed to send contact notification email")
 
       
         # EMAIL 2: Confirmation to customer
@@ -334,7 +338,11 @@ font-family:Arial, Helvetica, sans-serif;">
             "text/html",
         )
 
-        customer_email.send(fail_silently=False)
+        
+        try:
+            customer_email.send(fail_silently=False)
+        except Exception:
+            logger.exception("Failed to send customer confirmation email")
 
         # Success message shown on website
         messages.success(
