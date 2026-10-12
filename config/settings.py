@@ -34,6 +34,11 @@ ALLOWED_HOSTS = [
     if host.strip()
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://web-production-5bb69.up.railway.app",
+    "https://web-production-500d4.up.railway.app",
+]
+
 
 # Security settings for production
 SECURE_HSTS_SECONDS = 0
