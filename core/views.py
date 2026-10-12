@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.mail import EmailMultiAlternatives
 from django.conf import settings
+import logging
+
+logger = logging.getLogger(__name__)
 
 from .models import ContactMessage
 
