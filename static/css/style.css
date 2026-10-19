@@ -2601,3 +2601,11 @@ transform: translateY(-2px);
         font-size: 1.4rem;
     }
 }
+
+.site-logo {
+    display: block;
+    width: 230px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}

@@ -1,0 +1,51 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 150" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">DavieTech Innovations</title>
+
+  <!-- Background -->
+  <rect width="620" height="150" rx="12" fill="#ffffff"/>
+
+  <!-- Digital emblem -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 31 H100 Q125 31 125 56 V91 Q125 116 100 116 H22 Z"
+          stroke="#123B70" stroke-width="9"/>
+    <path d="M48 54 H94 M71 54 V95"
+          stroke="#1687E8" stroke-width="9"/>
+    <path d="M91 54 H120 M105 54 V95 M91 95 H120"
+          stroke="#123B70" stroke-width="9"/>
+    <path d="M14 126 Q63 145 116 123 Q143 111 151 83"
+          stroke="#1687E8" stroke-width="3"/>
+  </g>
+
+  <!-- Pixel accents -->
+  <g fill="#1687E8">
+    <rect x="131" y="27" width="9" height="9" rx="1"/>
+    <rect x="145" y="41" width="7" height="7" rx="1"/>
+    <rect x="135" y="54" width="6" height="6" rx="1"/>
+    <rect x="151" y="19" width="6" height="6" rx="1"/>
+  </g>
+
+  <!-- Company name -->
+  <text x="174" y="69"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="35" font-weight="800"
+        letter-spacing="-1" fill="#123B70">DAVIE</text>
+  <text x="303" y="69"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="35" font-weight="800"
+        letter-spacing="-1" fill="#1687E8">TECH</text>
+
+  <!-- Divider -->
+  <path d="M175 82 H568" stroke="#1687E8" stroke-width="2"/>
+
+  <!-- Innovations -->
+  <text x="176" y="105"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="18" font-weight="600"
+        letter-spacing="5" fill="#123B70">INNOVATIONS</text>
+
+  <!-- Tagline -->
+  <text x="176" y="128"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="12" fill="#526579">Technology for a Smarter Tomorrow</text>
+</svg>
